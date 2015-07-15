@@ -30,7 +30,7 @@ set tabstop=4
 "set selection=inclusive
 "tab->space
 set undofile
-set undodir=~/.vim/undofiles
+set undodir=~/undofiles
 set expandtab
 set fo+=mB
 "Indent related
