@@ -121,4 +121,5 @@ endfunction
 "let g:EchoFuncKeyPrev="ALT+P"
 
 let OmniCpp_MayCompleteScope = 1
-set clipboard=unnamedplus
+set clipboard=unnamed
+vmap <C-INS> "+y
