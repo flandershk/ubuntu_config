@@ -96,7 +96,6 @@ set tags=tags;/
 map <F4> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 "autocmd Filetype java,javascript,jsp inoremap <buffer>  .  .<C-X><C-O><C-P>
 
-
 map fg : Dox<cr>
 map fl : DoxLic<cr>
 map fa : DoxAuthor<cr>
