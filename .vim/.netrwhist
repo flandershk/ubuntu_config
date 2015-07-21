@@ -1,9 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/home/flanders/.config'
-let g:netrw_dirhist_2='/home/flanders'
-let g:netrw_dirhist_3='/home'
-let g:netrw_dirhist_4='/home/flanders'
-let g:netrw_dirhist_5='/etc/X11/xinit'
-let g:netrw_dirhist_6='/home/flanders/.vim'
-let g:netrw_dirhist_7='/home/flanders/Code/work/dataaudit/monitor/real_compare'
