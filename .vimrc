@@ -88,7 +88,7 @@ function! Debug()
 endfunc 
 
 let Tlist_Show_One_File=1
-let rlist_Exit_OnlyWindow=1
+let Tlist_Exit_OnlyWindow=1
 "auto complete
 let g:SuperTabRetainCompletionType=2
 "let g:SuperTabDefaultCompletionType="<C-X><C-O>"
