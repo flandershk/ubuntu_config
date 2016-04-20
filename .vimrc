@@ -17,12 +17,13 @@ set fileencoding=gbk
 set fileencodings=utf-8,ucs-bom,chinese
 set nocompatible
 set autochdir
-"set guioptions-=m
+set guioptions-=m
+set guioptions-=M
 set guioptions-=T
 set guioptions-=r
 set guioptions-=L
 set t_Co=256
-"è®¾ç½®ç¼©è¿›"
+"ÉèÖÃËõ½ø"
 set shiftwidth=4
 set sts=4
 set tabstop=4
@@ -37,15 +38,15 @@ set fo+=mB
 set cin
 set ai
 set cino=:0g0t0(susj1
-"è®¾ç½®é»˜è®¤å­—ä½“åŠå¤§å°"
-set guifont=Monaco\ 10
+"ÉèÖÃÄ¬ÈÏ×ÖÌå¼°´óĞ¡"
+set guifont=Anonymous\ Pro\ 13
 "set langmenu=zh_CN.utf-8
-"æ™ºèƒ½åŒºåˆ†å¤§å°å†™"
+"ÖÇÄÜÇø·Ö´óĞ¡Ğ´"
 set ignorecase smartcase
 set number
 set directory=.,$TEMP
 "language messages zh_cn.utf-8
-"è®¾ç½®é»˜è®¤é…è‰²æ–¹æ¡ˆ"
+"ÉèÖÃÄ¬ÈÏÅäÉ«·½°¸"
 "colorschem calmar256-dark
 syntax on
 set background=dark
@@ -60,9 +61,9 @@ endif
 map <F5> :call CompileRun()<CR> 
 map <C-F5> :call Debug()<CR>
 
-func CompileRun() 
+function! CompileRun() 
     exec "w" 
-    "Cç¨‹åº 
+    "C³ÌĞò 
     if &filetype == 'c' 
         exec "!gcc % -g -o %<" 
         exec "!%<" 
@@ -71,12 +72,12 @@ func CompileRun()
         exec "!%<"
     endif 
 endfunc 
-"ç»“æŸå®šä¹‰CompileRun
+"½áÊø¶¨ÒåCompileRun
 
-"å®šä¹‰Debugå‡½æ•°ï¼Œç”¨æ¥è°ƒè¯•ç¨‹åº 
-func Debug() 
+"¶¨ÒåDebugº¯Êı£¬ÓÃÀ´µ÷ÊÔ³ÌĞò 
+function! Debug() 
     exec "w" 
-    "Cç¨‹åº 
+    "C³ÌĞò 
     if &filetype == 'c' 
         exec "!gcc % -g -o %<" 
         exec "!gdb %<" 
@@ -87,7 +88,7 @@ func Debug()
 endfunc 
 
 let Tlist_Show_One_File=1
-let Tlist_Exit_OnlyWindow=1
+let rlist_Exit_OnlyWindow=1
 "auto complete
 let g:SuperTabRetainCompletionType=2
 "let g:SuperTabDefaultCompletionType="<C-X><C-O>"
@@ -121,5 +122,7 @@ endfunction
 "let g:EchoFuncKeyPrev="ALT+P"
 
 let OmniCpp_MayCompleteScope = 1
-set clipboard=unnamed
-vmap <C-INS> "+y
+
+set clipboard^=unnamed,unnamedplus
+"set go+=a
+vnoremap <C-Ins> "+y
